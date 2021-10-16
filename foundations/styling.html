@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling Shorthands</title>
+
+    <style>
+      body {
+        width: 80%;
+        margin: auto;
+      }
+      div {
+        border: 2px solid blue;
+        background-color: aqua;
+      }
+      p {
+        margin: 0px;
+        padding: 0px;
+        color: yellow;
+        background-color: blue;
+      }
+      .pad1 {
+        /* Top, Right, Bottom, Left */
+        padding: 2px 4px 8px 16px;
+      }
+      .pad2 {
+        /* Top, Right+Left, Bottom */
+        padding: 10px 5px 20px;
+      }
+      .pad3 {
+        /* Top+Bottom, Right+Left */
+        padding: 10px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shorthands for Margin + Padding</h1>
+    <h5>Padding 2 4 8 16; [Top, Right, Bottom, Left]</h5>
+    <div class="pad1">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem placeat
+        perferendis obcaecati amet tempore, hic mollitia? Quod, quas
+        repellendus! Illum atque eveniet repellat reprehenderit necessitatibus
+        harum, eius autem cumque ratione sit perspiciatis. Eos incidunt velit,
+        dolor veniam accusamus error mollitia magni corporis necessitatibus,
+        deserunt porro nemo fugiat voluptatum excepturi voluptatem!
+      </p>
+    </div>
+    <h5>Padding 10 5 20; [Top, Right+Left, Bottom]</h5>
+    <div class="pad2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        veritatis optio voluptate praesentium, quaerat perspiciatis incidunt
+        facere a nobis culpa, unde voluptates dolore. Magnam, sed natus unde
+        voluptatum quod vitae, accusantium placeat excepturi porro delectus ut
+        illo assumenda deserunt tempore dolor quam a. Eveniet ipsum excepturi
+        sit magni eligendi nostrum.
+      </p>
+    </div>
+    <h5>Padding 10 5; [Top+Bottom, Right+Left]</h5>
+    <div class="pad3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur rem
+        quo eveniet at tempora fugit, odio eius, accusantium dolor laudantium
+        maxime sint temporibus veniam quaerat necessitatibus repudiandae
+        deleniti? Praesentium, voluptates laboriosam! Dolorem sint esse, minus
+        nisi soluta provident harum fuga maiores. Id accusantium reprehenderit
+        praesentium dolorum beatae animi ea ducimus.
+      </p>
+    </div>
+  </body>
+</html>

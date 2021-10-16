@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexing with Flexbox</title>
+
+    <style>
+      .flex-container {
+        display: flex;
+      }
+      .noflex {
+        background: red;
+        border: 4px solid goldenrod;
+        height: 100px;
+      }
+      .one,
+      .two,
+      .three {
+        background: peachpuff;
+        border: 4px solid brown;
+        height: 100px;
+        flex: 1 1 0%;
+      }
+      .two2 {
+        color: white;
+        background-color: blueviolet;
+        border: 4px solid darkgreen;
+        height: 100px;
+        flex: 2 1 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The elements below are in a div with a display: flex and a flex: 1 for the
+      children
+    </p>
+    <div class="flex-container">
+      <div class="one">Flexbox 1</div>
+      <div class="two">Flexbox 2</div>
+      <div class="three">Flexbox 3</div>
+    </div>
+    <p>
+      The elements below are in a div with a normal display and do not have the
+      flex: 1 for the children
+    </p>
+    <div>
+      <div class="noflex">Noflex 1</div>
+      <div class="noflex">Noflex 2</div>
+      <div class="noflex">Noflex 3</div>
+    </div>
+    <p>
+      The elements below show the differences in growth size: element one and
+      three have a growth of 1, element 2 a growth of 2
+    </p>
+    <div class="flex-container">
+      <div class="one">Flexbox 1<br />flex: 1 1 0%</div>
+      <div class="two2">Flexbox 2<br />flex: 2 1 0%</div>
+      <div class="three">Flexbox 3<br />flex: 1 1 0%</div>
+    </div>
+  </body>
+</html>

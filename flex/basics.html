@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 1px solid blue;
+        background-color: violet;
+        padding: 4px 6px;
+        margin: 10px 20px;
+        width: 400px;
+        height: 120px;
+        display: flex;
+      }
+      .centered {
+        align-items: center;
+      }
+      .right {
+        justify-content: right;
+      }
+      .start-around {
+        align-items: flex-start;
+        justify-content: space-around;
+      }
+      .end-around {
+        align-items: flex-end;
+        justify-content: space-around;
+      }
+      .center-around {
+        align-items: center;
+        justify-content: space-around;
+      }
+      .center-between {
+        align-items: center;
+        justify-content: space-between;
+      }
+      .center-even {
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .container div {
+        background-color: wheat;
+        width: 50px;
+        height: 50px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <code>align-items: center;</code>
+    <div class="container centered">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <code>justify-content: right;</code>
+    <div class="container right">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <code>align-items: center; justify-content: right;</code>
+    <div class="container centered right">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <code>align-items: center; justify-content: space-between;</code>
+    <div class="container center-between">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <code>align-items: center; justify-content: space-around;</code>
+    <div class="container center-around">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <code>align-items: center; justify-content: space-evenly;</code>
+    <div class="container center-even">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <code>align-items: flex-start; justify-content: space-around;</code>
+    <div class="container start-around">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <code>align-items: flex-end; justify-content: space-around;</code>
+    <div class="container end-around">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
