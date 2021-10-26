@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script>
+			function display(str) {
+				let flip = false;
+				for (let x = 0; x < str.length * 2 + 1; x++) {
+					if (x == str.length) {
+						flip = true;
+					}
+					if (flip) {
+						if (x == str.length) x += 2;
+						console.log(str.slice(0, x - str.length));
+					} else {
+						console.log(str.slice(0, str.length - x));
+					}
+				}
+			}
+		</script>
+	</head>
+	<body style="padding: 23px">
+		<button onclick="display('Hello, World!')">Click Me!</button>
+	</body>
+</html>

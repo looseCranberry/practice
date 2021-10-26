@@ -1,0 +1,21 @@
+* Pseudo code to find denominators
+
+User inputs a number
+User inputs another number
+Init a counter at one
+Check division against number 1
+No remainder?
+	Push as denominator
+Check division against number 2
+No remainder?
+	Keep as denominator
+Otherwise pop off the stack
+Increment counter
+Continue
+
+The purpose of pseudocode is to identify and create a roadmap
+of dealing with problems. In the above example we have a very
+simple problem--find the denominators of two numbers. We can
+then break that problem down into multiple _subproblems_ as we
+have listed above. Now we have manageable issues to deal with
+one by one.

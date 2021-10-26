@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FizzBuzz!</title>
+		<style>
+			* {
+				font-family: Helvetica, Verdana, Tahoma, sans-serif;
+			}
+			h1,
+			h5,
+			p {
+				margin: 5px;
+				padding: 0;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				width: 80%;
+				margin: auto;
+				padding: 64px 0px;
+			}
+			textarea {
+				margin: 20px;
+				width: 400px;
+				height: 200px;
+			}
+			.textbox {
+				width: 30px;
+				padding: 4px 8px;
+			}
+		</style>
+		<script>
+			let str = "";
+			function fizz(buzz) {
+				let x = document.createElement("h5");
+				x.innerHTML = buzz ? "Buzz!" : "Fizz!";
+				return x;
+			}
+			function buzz() {
+				let x = document.createElement("h1");
+				x.innerHTML = "FizzBuzz!";
+				return x;
+			}
+			function fizzle() {
+				let num = document.getElementById("no").value;
+				let div = document.getElementById("res");
+				for (let x = 1; x < num; x++) {
+					if (x % 3 < 1 && x % 5 < 1) div.innerHTML += "<h1>FizzBuzz!</h1>";
+					else if (x % 5 < 1) div.innerHTML += "<h2>Buzz!</h2>\n";
+					else if (x % 3 < 1) div.innerHTML += "<h3>Fizz!</h3>\n";
+					else div.innerHTML += "<h4>" + x + "</h4>";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>The Game of FizzBuzz!</h1>
+		<div>
+			Enter your number:
+			<input id="no" class="textbox" type="text" />
+			<button onclick="fizzle()">Play!</button>
+		</div>
+		<div id="res"></div>
+	</body>
+</html>
