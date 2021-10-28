@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Test!</title>
+		<style>
+			* {
+				margin: 2em;
+			}
+			body {
+				width: 80%;
+				margin: auto;
+				font-family: Helvetica, Arial, sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>I'm a damn fine tile if i do say so myself...</h1>
+		<div id="container"></div>
+		<div>
+			<button onclick='alert("Hello, World!")'>Click Me!</button>
+			<button id="btn">Click ME!</button>
+			<script>
+				const btn = document.querySelector("#btn");
+				btn.onclick = () => alert("Hello, World!");
+			</script>
+
+			<!-- And now for the grandaddy of them all... -->
+			<button id="bstBtn">Click. Me.</button>
+			<script>
+				const bstbtn = document.querySelector("#bstBtn");
+				bstbtn.addEventListener("click", () => {
+					alert("Hello, World!");
+				});
+				bstbtn.addEventListener("click", () => {
+					const cont = document.querySelector("#container");
+					const elem = document.createElement("h3");
+					elem.style.color = "Green";
+					elem.textContent = "I am a second event listener!!!";
+					cont.appendChild(elem);
+				});
+			</script>
+		</div>
+	</body>
+
+	<script>
+		const container = document.querySelector("#container");
+		const content = document.createElement("div");
+		content.classList.add("content");
+		content.textContent = "This is a glorious text-content!";
+		container.appendChild(content);
+		let varElement = document.createElement("p");
+		varElement.style.color = "red";
+		varElement.textContent = "Hey I'm red!";
+		container.appendChild(varElement);
+
+		varElement = document.createElement("h3");
+		varElement.style.color = "blue";
+		varElement.textContent = "I'm a blue h3!";
+		container.appendChild(varElement);
+
+		varElement = document.createElement("div");
+		varElement.style.border = "solid 1px black";
+		varElement.style.background = "pink";
+		let child = document.createElement("h1");
+		child.textContent = "I'm in a div!";
+		varElement.appendChild(child);
+		child = document.createElement("p");
+		child.textContent = "ME TOO!";
+		varElement.appendChild(child);
+		container.appendChild(varElement);
+
+		const buttons = document.querySelectorAll("button");
+		buttons.forEach((button) => {
+			button.addEventListener("click", () => {
+				console.log(button.id);
+			});
+		});
+	</script>
+</html>

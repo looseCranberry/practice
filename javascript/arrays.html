@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript Basics</title>
+		<script>
+			let iAmArray = ["Item One", "Item Two", "Item Three"];
+			console.log("Array State");
+			console.table(iAmArray);
+
+			console.log(`Array typeof: ${typeof iAmArray}`);
+			console.log(iAmArray.length);
+
+			// This function uses two ways to verify an Array from an Object
+			function isItAnArray(val) {
+				console.log(Array.isArray(val) && val instanceof Array);
+			}
+
+			// This function adds to the end of an array
+			function addit(val) {
+				iAmArray.push(val);
+			}
+
+			// This function will change the second element of the Array
+			function change() {
+				iAmArray[1] = "New Item Two";
+				console.log("Array State");
+				console.table(iAmArray);
+			}
+
+			/*
+			 * This function will sort the array, with some surprising
+			 * results
+			 */
+			function sortit() {
+				/**
+				 * By accident stumbled upon an interesting feature of sort,
+				 * the following code will result in an array of:
+				 * 1 2 2 3 4 5 5 54 7
+				 * Very strange behavior...
+				 */
+				iAmArray = [5, 2, 5, 7, 54, 1, 3, 2, 4];
+				console.log("Pre Sort");
+				console.table(iAmArray);
+				iAmArray.sort();
+				console.log("Post Sort");
+				console.table(iAmArray);
+			}
+
+			/*
+			 * This function goes over the three popular ways to
+			 * iterate over an Array
+			 */
+			function loopit(arrayObject) {
+				// Loop by length
+				for (let x = 0; x < arrayObject.length; x++) {
+					let CodeGoHere = "Code...";
+				}
+				// Loop by iterator
+				for (let x of arrayObject) {
+					let CodeGoHere = "Code...";
+				}
+				// Loop by array.ForEach function
+				arrayObject.forEach((element) => {
+					element = "Some Coding Here...";
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<button style="margin: 10px; padding: 10px" onclick="change()">
+			Change Array
+		</button>
+		<button style="margin: 10px; padding: 10px" onclick="sortit()">
+			Sort Array
+		</button>
+		<button style="margin: 10px; padding: 10px" onclick="isItAnArray(iAmArray)">
+			Is it an array?
+		</button>
+	</body>
+</html>

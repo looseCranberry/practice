@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Practice</title>
+		<script>
+			// Query Selectors
+			document.querySelector(".container"); // Selects the first instance of 'container' class
+			document.querySelectorAll(".container"); // Selects all the instances of 'container' class
+			let container = document.querySelector("container");
+			container.querySelector("div"); // Selects the only 'div' member of the first container.
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<div class="container">
+				<div class="article"></div>
+			</div>
+			<div class="container"></div>
+		</div>
+	</body>
+</html>

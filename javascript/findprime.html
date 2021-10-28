@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prime Finder!</title>
+		<!-- Prime Number Finder per MDN test
+			Worked accurately and quickly up to 50,000!
+		-->
+		<script>
+			function findprime() {
+				let res = [];
+				let ending = prompt("Where shall we end?", "10");
+				for (let x = 2; x < ending; x++) {
+					if (primeCheck(x)) res.push(x);
+				}
+				console.log(`The primes found for ${ending} are: ${res}`);
+			}
+			function primeCheck(val) {
+				let x = 2;
+				let res = val;
+				while (x <= val / 2) {
+					if (val % x++ == 0) res = false;
+				}
+				return res;
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="findprime()">Click Me!</button>
+	</body>
+</html>
